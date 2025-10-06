@@ -101,8 +101,6 @@ In my case it's 1 as I've got only one GPU
 
 Run another test if you feel like it.
 
-
-
 import tensorflow as tf
 from tensorflow.keras import datasets, layers, models
 
