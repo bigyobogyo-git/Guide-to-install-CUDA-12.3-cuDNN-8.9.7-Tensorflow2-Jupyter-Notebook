@@ -1,0 +1,3 @@
+With fresh Install of Ubuntu 22.04 select third parties to install teh latest nvidia driver and cuda
+Note that you can install more than one cuda on your machine and the aplication will choose the sutitable cuda. 
+In this case it ame with Nvidia driver 580.65.06 and CUDA 13
