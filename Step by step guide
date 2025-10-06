@@ -17,10 +17,21 @@ $  sudo sh cuda_12.3.0_545.23.06_linux.run --toolkit --silent --override
 set the path accordingly
 
 $  nano ~/.bashrc
+
 Add the following lines at the end of the file:
+
 export PATH=/usr/local/cuda-12.3/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
+Press ctrl+x, then Y, then enter
+
+Apply the cahnges by running:
+
+$ source ~/.bashrc
+
+You can verify the changes in a new terminal by running:
+
+nvcc --version
 
 download cuDNN 8.9.7. Be aware you need to have an nvidia account in order to be able to download cuDNN
 
