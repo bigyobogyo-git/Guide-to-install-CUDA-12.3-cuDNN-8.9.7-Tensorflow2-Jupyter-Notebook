@@ -31,9 +31,72 @@ $ source ~/.bashrc
 
 You can verify the changes in a new terminal by running:
 
-nvcc --version
+$  nvcc --version
 
-download cuDNN 8.9.7. Be aware you need to have an nvidia account in order to be able to download cuDNN
+download cuDNN 8.9.7. Be aware you need to have an nvidia account in order to be able to download cuDNN. Use the arcive section to access the tar file. Link below.
+
+$  https://developer.nvidia.com/rdp/cudnn-archive
+
+Download Local Installer for Linux x86_64(Tar)
+
+Run the codes from the folder you downloaded the file.
+
+$  tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+$  sudo cp -P cudnn-linux-x86_64-8.9.7.29_cuda12-archive/lib/* /usr/local/cuda/lib64/
+$  sudo cp cudnn-linux-x86_64-8.9.7.29_cuda12-archive/include/* /usr/local/cuda/include/
+
+Use echo or nano to modify the bashrc. 
+
+$ echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"' >> ~/.bashrc
+$ echo 'export CUDA_HOME=/usr/local/cuda' >> ~/.bashrc
+$ echo 'export PATH="/usr/local/cuda/bin:$PATH"' >> ~/.bashrc
+
+Submit changes by running:
+
+$ source ~/.bashrc
+
+Install virtualenv
+
+$  https://virtualenv.pypa.io/en/latest/installation.html
+
+Create a virtualenv and activate it. 
+
+$  https://virtualenv.pypa.io/en/latest/user_guide.html
+
+Install tensorflow with GPU from the officail tensorflow site
+
+$  https://www.tensorflow.org/install/pip
+
+$  pip install tensorflow[and-cuda]     #run this to install tensorflow with gpu support
+
+Verify the installation.
+$  python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+It should recognize the GPU:
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+
+Use this git repo for double check.
+$  sudo apt install git
+$  git clone https://github.com/gokul-a-krishnan/python-gpu-check
+$  cd python-gpu-check/tensorflow
+$  python3 check.py
+
+Install Jupyter Notebook.
+$  pip3 install notebook
+
+If there are missing depencies install them. For example: 
+$  sudo apt install python3-pip
+
+Start the Notebook.
+$  jupyter notebook
+
+
+
+
+
+
+
+
 
 
 
