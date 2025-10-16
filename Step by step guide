@@ -84,11 +84,17 @@ $  python3 check.py
 Install Jupyter Notebook.
 $  pip3 install notebook
 
+Or install jupyter lab.
+$  pip3 install jupyterlab  
+
 If there are missing depencies install them. For example: 
 $  sudo apt install python3-pip
 
 Start the Notebook.
 $  jupyter notebook
+
+Or jupyter lab
+$    jupyter lab
 
 Run the code.
 $  import tensorflow as tf
