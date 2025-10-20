@@ -7,4 +7,5 @@ Re-install with pip:
 $  pip install tensorflow[and-cuda]
 
 There is no need to exist from the jupyter notebook just open a new terminal and log in to the virtualenv and runt he code again once the installation is finished. 
-Either returnign back to the old nvidia driver or pip uninstall and re-install tensorflow with cuda for every new notebook. 
+
+Restart will fix the problem permanently though. 
