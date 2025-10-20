@@ -1,0 +1,9 @@
+As a new nvidia driver came out today incompatibilty error with cuda appeared. Simple fix:
+
+Uninstall tensorflow:
+$  pip uninstall pip uninstall tensorflow[and-cuda]
+
+Re-install with pip:
+$  pip install tensorflow[and-cuda]
+
+There is no need to exist from the jupyter notebook just open a new terminal and log in to the virtualenv and runt he code again once the installation is finished. 
